@@ -1,0 +1,33 @@
+# Facultative Glide Epenthesis:
+#   ∅ → w / o _ a
+#   ∅ → y / i _ {a, o}
+
+rules:
+
+  - description: "Glide w epenthesis between o and a"
+    input: ""
+    output: "w"
+    left: "o"
+    right: "a"
+
+  - description: "Glide y epenthesis between i and a"
+    input: ""
+    output: "y"
+    left: "i"
+    right: "a"
+
+  - description: "Glide y epenthesis between i and o"
+    input: ""
+    output: "y"
+    left: "i"
+    right: "o"
+
+  # questionable source
+  - description: "Glottal stop insertion between adjacent vowels"
+    input: ""
+    output: "ʔ"
+    left:
+      class: vowel
+    right:
+      class: vowel
+    active: false

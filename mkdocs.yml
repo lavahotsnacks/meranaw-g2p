@@ -1,0 +1,21 @@
+site_name: meranaw-g2p Documentation
+site_description: Grapheme-to-Phoneme conversion for the Meranaw language
+
+theme:
+  name: material
+  palette:
+    scheme: default
+    primary: indigo
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          import:
+            - https://docs.python.org/3/objects.inv
+
+nav:
+  - Home: index.md
+  - Usage: usage.md
+  - API Reference: api.md

@@ -1,0 +1,64 @@
+# Ambiguous Consonant Rules
+#
+# Certain orthographic consonants can phonemically represent either
+# a plain or a glottalized (ejective) counterpart. This ambiguity is
+# resolved through the FST by producing branching output paths.
+#
+# The rule applies everywhere except when the consonant is followed
+# by an apostrophe, which would indicate the ejective has already been
+# produced by a preceding digraph rule (e.g., ph -> p').
+#
+# DISABLED in both manifest and rules.
+# To enable: uncomment in language.yaml pipeline AND set active: true below.
+#
+# Notation:
+#   p -> p | p' / _ (sigma - "'")  or [EOS]
+#   t -> t | t' / _ (sigma - "'")  or [EOS]
+#   k -> k | k' / _ (sigma - "'")  or [EOS]
+#   s -> s | s' / _ (sigma - "'")  or [EOS]
+
+rules:
+
+  - description: "p may branch to plain or ejective when not before apostrophe"
+    input: "p"
+    output:
+      - "p"
+      - "p'"
+    right:
+      class: "*"
+      except: ["'"]
+    mode: optional
+    active: false
+
+  - description: "t may branch to plain or ejective when not before apostrophe"
+    input: "t"
+    output:
+      - "t"
+      - "t'"
+    right:
+      class: "*"
+      except: ["'"]
+    mode: optional
+    active: false
+
+  - description: "k may branch to plain or ejective when not before apostrophe"
+    input: "k"
+    output:
+      - "k"
+      - "k'"
+    right:
+      class: "*"
+      except: ["'"]
+    mode: optional
+    active: false
+
+  - description: "s may branch to plain or ejective when not before apostrophe"
+    input: "s"
+    output:
+      - "s"
+      - "s'"
+    right:
+      class: "*"
+      except: ["'"]
+    mode: optional
+    active: false

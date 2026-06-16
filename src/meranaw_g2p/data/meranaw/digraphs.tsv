@@ -1,0 +1,7 @@
+# Heavy Consonant Digraphs
+# Context-free mappings for the three heavy (ejective) consonants
+# documented by Lobel and Riwarung (2009).
+input	output
+ph	p'
+th	t'
+kh	k'

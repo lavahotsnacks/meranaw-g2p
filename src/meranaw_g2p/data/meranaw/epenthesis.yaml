@@ -1,0 +1,31 @@
+  # questionable source
+
+rules:
+
+  - description: "Optional schwa after n before non-homorganic consonant"
+    input: ""
+    output: "ə"
+    left: "n"
+    right:
+      class: consonant
+      except: ["d", "t", "t'"]
+    mode: optional
+
+  - description: "Optional schwa after ŋ before non-homorganic consonant"
+    input: ""
+    output: "ə"
+    left: "ŋ"
+    right:
+      class: consonant
+      except: ["g"]
+    mode: optional
+
+  - description: "Optional schwa between non-nasal consonants"
+    input: ""
+    output: "ə"
+    left:
+      class: consonant
+      except: ["n", "ŋ"]
+    right:
+      class: consonant
+    mode: optional

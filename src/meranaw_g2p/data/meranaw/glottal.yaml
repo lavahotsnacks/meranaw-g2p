@@ -1,0 +1,34 @@
+# Notation:
+#   â → aʔ / _ [EOS]
+#   ê → əʔ / _ [EOS]
+#   î → iʔ / _ [EOS]
+#   ô → oʔ / _ [EOS]
+#   ' → ʔ  / _ [EOS]
+
+rules:
+
+  - description: "Word-final â resolves to vowel plus glottal stop"
+    input: "â"
+    output: "aʔ"
+    right: "[EOS]"
+
+  - description: "Word-final ê resolves to schwa plus glottal stop"
+    input: "ê"
+    output: "əʔ"
+    right: "[EOS]"
+
+  - description: "Word-final î resolves to vowel plus glottal stop"
+    input: "î"
+    output: "iʔ"
+    right: "[EOS]"
+
+  - description: "Word-final ô resolves to vowel plus glottal stop"
+    input: "ô"
+    output: "oʔ"
+    right: "[EOS]"
+
+  # questionable source
+  # - description: "Word-final apostrophe represents a glottal stop"
+  #   input: "'"
+  #   output: "ʔ"
+  #   right: "[EOS]"

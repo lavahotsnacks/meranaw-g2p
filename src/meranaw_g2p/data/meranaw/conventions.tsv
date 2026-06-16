@@ -1,0 +1,7 @@
+# Orthographic Conventions
+# Context-free mappings for standard Meranaw orthographic conventions:
+# ejective fricative (z → s'), velar nasal (ng → ŋ), schwa (e → ə).
+input	output
+z	s'
+ng	ŋ
+e	ə

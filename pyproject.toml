@@ -1,0 +1,56 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "meranaw-g2p"
+version = "0.1.0"
+description = "Grapheme-to-Phoneme conversion for the Meranaw language"
+readme = "README.md"
+license = "MIT"
+authors = [
+    { name = "AH Mangorangca", email = "lavahotsnacks@gmail.com" },
+]
+keywords = ["g2p", "meranaw", "phonology", "grapheme-to-phoneme"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Text Processing :: Linguistic",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+requires-python = ">=3.9"
+dependencies = [
+    "pynini>=2.1",
+    "pyyaml",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7",
+    "mkdocs-material",
+    "mkdocstrings[python]",
+]
+
+[project.urls]
+Homepage = "https://github.com/lavahotsnacks/meranaw-g2p"
+Documentation = "https://github.com/lavahotsnacks/meranaw-g2p"
+Source = "https://github.com/lavahotsnacks/meranaw-g2p"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["meranaw_g2p*"]
+
+[tool.setuptools.package-data]
+"meranaw_g2p.data" = ["**/*.yaml", "**/*.tsv"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

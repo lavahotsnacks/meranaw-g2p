@@ -1,0 +1,5 @@
+# Exception Dictionary
+# Words listed here bypass the G2P pipeline entirely.
+# Format: orthographic form [tab] phonemic transcription
+# This file is optional. It can remain empty until exceptions are discovered.
+input	output

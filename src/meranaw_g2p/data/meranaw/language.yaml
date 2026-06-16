@@ -1,0 +1,152 @@
+# Language Metadata
+# Core identifiers and inventory for the Meranaw G2P system.
+
+language: Meranaw
+iso: mrw
+
+# Writing System
+# Alphabet includes all orthographic characters.
+# Phonemes define the target phonetic inventory.
+
+alphabet:
+  graphemes:
+    - a
+    - b
+    - c
+    - d
+    - e
+    - f
+    - g
+    - h
+    - i
+    - j
+    - k
+    - l
+    - m
+    - n
+    - o
+    - p
+    - q
+    - r
+    - s
+    - t
+    - u
+    - v
+    - w
+    - x
+    - y
+    - z
+    - A
+    - B
+    - C
+    - D
+    - E
+    - F
+    - G
+    - H
+    - I
+    - J
+    - K
+    - L
+    - M
+    - N
+    - O
+    - P
+    - Q
+    - R
+    - S
+    - T
+    - U
+    - V
+    - W
+    - X
+    - Y
+    - Z
+    - "'"
+    - "â"
+    - "ê"
+    - "î"
+    - "ô"
+    - "Â"
+    - "Ê"
+    - "Î"
+    - "Ô"
+
+  phonemes:
+    - p
+    - t
+    - k
+    - "ʔ"
+    - "p'"
+    - "t'"
+    - "k'"
+    - b
+    - d
+    - g
+    - s
+    - "s'"
+    - h
+    - m
+    - n
+    - "ŋ"
+    - r
+    - l
+    - w
+    - y
+    - a
+    - i
+    - o
+    - "ə"
+
+  special_symbols:
+    - "[BOS]"
+    - "[EOS]"
+
+# Character Classes
+# Named sets that can be referenced by context-dependent rules.
+# Each set is a list of phonemic characters.
+
+sets:
+  vowel:
+    - a
+    - i
+    - o
+    - "ə"
+
+  consonant:
+    - p
+    - t
+    - k
+    - "ʔ"
+    - "p'"
+    - "t'"
+    - "k'"
+    - b
+    - d
+    - g
+    - s
+    - "s'"
+    - h
+    - m
+    - n
+    - "ŋ"
+    - r
+    - l
+    - w
+    - y
+
+# Pipeline Definition
+# Ordered list of rule files to compile and compose.
+# Each entry is a filename relative to this language directory.
+# To add a new phase, insert a filename at the desired position.
+# To disable a phase, prefix the line with '#'.
+
+pipeline:
+  - case.tsv
+  - digraphs.tsv
+  - conventions.tsv
+  - glottal.yaml
+  - hiatus.yaml
+  # - epenthesis.yaml # disabled: conditions uncertain
+  # - ambiguous.yaml  # disabled: requires probabilistic disambiguation
+  - exceptions.tsv
